@@ -1,0 +1,132 @@
+.custom-div {
+    display: inline-flex; /* Keep everything on one line */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    padding: 8px 16px; /* Add some space around the text */
+    border: 2px solid black; /* Border styling */
+    background-color: #f8fafc; /* Background color */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .custom-div:hover {
+    background-color: #ec4899; /* Change background on hover */
+    border-right-width: 6px; /* Bold right border */
+    border-bottom-width: 6px; /* Bold bottom border */
+  }
+  
+  .center-content {
+    text-align: center; /* Align the text in the center */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep the tex*/
+  }
+  
+  .list-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .text-display {
+    font-size: 16px;
+    color: #333;
+    padding: 15px; /* Adjust padding for more space inside the container */
+    border: 2px solid #ccc; /* Fixed border size */
+    border-left: 4px solid orange; /* Change left border to orange */
+    background-color: #f0f0f0; /* Background color */
+    width: 250px; /* Fixed width of the container */
+    height: 200px; /* Increased height to ensure first text is fully visible */
+    border-radius: 0; /* Sharp corners, no rounded edges */
+    font-weight: bold;
+    margin-bottom: 20px; /* Space between text and dots */
+    line-height: 1.5; /* Spacing for multi-line text */
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Prevent text overflow */
+    word-wrap: break-word; /* Ensure text wraps to fit inside */
+  }
+  
+  /* Style the dots container */
+  .dots-container {
+    display: flex;
+    justify-content: center; /* Center the dots horizontally */
+    gap: 15px; /* Space between the dots */
+    margin-top: 20px; /* Space between the dots and the text */
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+    border-radius: 50%; /* Circular dots */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  /* Hover effect for dots */
+  .dot:hover {
+    transform: scale(1.4); /* Slightly larger scale for better visibility */
+    background-color: #ec4899; /* Change color when hovering */
+  }
+  
+
+  /* Loader Container */
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+  }
+  
+  /* RGB Loader Spinner */
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 8px solid transparent;
+    border-top: 8px solid rgb(255, 0, 0);
+    border-right: 8px solid rgb(0, 255, 0);
+    border-bottom: 8px solid rgb(0, 0, 255);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spin Animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hide Loader by Default */
+  .hidden {
+    display: none;
+  }
+  
+  /* Button Hover Effect */
+  .download-btn {
+    display: inline-block;
+    background-color: #FB923C;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .download-btn:hover {
+    background-color: #F97316;
+    transform: translateY(-2px);
+  }
+  

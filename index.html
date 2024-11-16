@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="something.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="loader.js">
+    <style>
+      .list-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+  
+      .item-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+      }
+  
+      .item-list li {
+        margin: 5px 0;
+      }
+  
+      .dots-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+  
+      .dot {
+        width: 15px;
+        height: 15px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+  
+      .dot:hover {
+        transform: scale(1.2);
+      }
+  
+      .text-display {
+        font-size: 16px;
+        color: #333;
+        min-height: 20px; /* Prevent layout shift */
+        font-weight: bold;
+      }
+    </style>
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui', ...],
+      'mono': ['ui-monospace', 'SFMono-Regular', ...]
+            }
+      
+
+     }
+          }
+        
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="px-3 py-3">
+            <div class="flex gap-x-2">
+                <img src="images/site-logo.svg" alt="logo">
+                <h1 class="text-2xl font-sans-serif font-bold">DSA Revision</h1>
+             </div>
+        </div>
+    </header>
+
+    <section class="py-3 px-20">
+      <div class="container mx-auto">
+        <div class="row">
+          <!-- Flex container for the text and image -->
+          <div class="flex items-center justify-between gap-10">
+            <!-- Left column: Text -->
+            <div class="flex-1 space-y-5">
+              <h1 class="font-bold text-3xl">Best way to revise for your next coding interview</h1>
+              <h4 class="text-lg">
+                Get everything in a single guide: Data structures, algorithms, patterns, visualizers, questions, examples, solutions, explanations, and much more!
+              </h4>
+    
+              <div class="custom-div border-solid border-black border-2 bg-slate-200 rounded-md">
+                <a href="https://gumroad.com/" class="center-content">
+                  Buy FREE through <span class="font-bold text-lg px-2">Gumroad</span>
+                </a>
+              </div>
+    
+              <!-- List container -->
+              <div class="list-container">
+                <!-- Text Display at the top (default text) -->
+                <div class="text-display border border-gray-300 p-4 bg-gray-100">
+                  Excellent revision tool, specially when you have an interview coming up in 15 days or so. It's so hard to find everything in one place.
+                </div>
+    
+                <!-- Dots below the text -->
+                <div class="dots-container flex justify-center gap-4 mt-4">
+                  <div class="dot" data-text="Highly recommended if you're interviewing or preparing these days - this guide will help you revise concepts and practice things before the interview."></div>
+                  <div class="dot" data-text="Awesome! Love how the concepts are explained + all the wonderful resources mentioned. Having everything in one guide is super helpful."></div>
+                  <div class="dot" data-text="An incredible tool for anyone who wants to dive deep into interview prep. The structure is perfect and easy to follow."></div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Right column: Image -->
+            <div class="flex-1">
+              <img src="/images/main.png" alt="Hero-main" class="rounded-md w-full max-h-96 object-contain">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      // JavaScript for dots functionality
+      const dots = document.querySelectorAll('.dot');
+      const textDisplay = document.querySelector('.text-display');
+    
+      // Default text that will always show initially
+      const defaultText =
+        "Excellent revision tool, specially when you have an interview coming up in 15 days or so. It's so hard to find everything in one place.";
+    
+      // Set initial text
+      textDisplay.textContent = defaultText;
+    
+      // Add event listeners to each dot for click events
+      dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+          // Update the text-display content with the dot's data-text attribute when clicked
+          textDisplay.textContent = dot.getAttribute('data-text');
+        });
+      });
+    </script>
+    
+
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="py-10 px-20">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">What's Included</h2>
+        <div class="flex items-center justify-between gap-10">
+          <!-- Left Column: Image -->
+          <div class="flex-1">
+            <div class="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-green-400 to-yellow-400 p-6">
+              <img src="images/guide2.jpg" alt="Table of Contents" class="w-full h-auto rounded-md shadow">
+            </div>
+          </div>
+          <!-- Right Column: Text -->
+          <div class="flex-1">
+            <ul class="space-y-4 text-lg">
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> 15+ algo patterns discussed
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> Detailed solutions and explanations
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> Awesome resources, articles, blogs
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> Visualizers and animations included
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> 100 pages of quality content
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> Concepts explained for beginners
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="text-green-500">✔</span> All in one revision guide
+              </li>
+            </ul>
+            <div class="mt-6">
+              <a
+                href="#"
+                class="inline-block bg-orange-500 text-white text-lg font-bold px-6 py-3 rounded-full shadow hover:bg-orange-600 transition"
+              >
+                Download for free
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="grid-container grid gap-4 grid-cols-2">
+      <div class="border-2">
+        <div class="">
+          <h3>
+            “Walling helps us visually organise ideas and tasks, work collaboratively and efficiently within our team. The visual experience makes it so easy to plan content and stay on track with our projects and campaigns.”
+          </h3>
+        </div>
+        <ul role="list" class="p-6 divide-y divide-slate-200">
+            <!-- Remove top/bottom padding when first/last child -->
+            <li class="flex py-4 first:pt-0 last:pb-0">
+              <img class="h-10 w-10 rounded-full" src="images/profiles/profile-1.png" alt="" />
+              <div class="ml-3 overflow-hidden">
+                <p class="text-sm font-medium text-slate-900">Harsh Pandey</p>
+                <p class="text-sm text-slate-500 truncate">Head of Department</p>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="border-2">
+        <div>
+          <h3>
+            “Walling helps us visually organise ideas and tasks, work collaboratively and efficiently within our team. The visual experience makes it so easy to plan content and stay on track with our projects and campaigns.”
+          </h3>
+        </div>
+        <div>
+          <ul role="list" class="p-6 divide-y divide-slate-200">
+            <!-- Remove top/bottom padding when first/last child -->
+            <li class="flex py-4 first:pt-0 last:pb-0">
+              <img class="h-10 w-10 rounded-full" src="images/profiles/profile-1.png" alt="" />
+              <div class="ml-3 overflow-hidden">
+                <p class="text-sm font-medium text-slate-900">Abhijeet Bhowther</p>
+                <p class="text-sm text-slate-500 truncate">Account Section</p>
+              </div>
+            </li>
+        </ul>
+        </div>
+      </div>
+      <div class="border-2">
+        <div>
+          <h3>
+            “Walling helps us visually organise ideas and tasks, work collaboratively and efficiently within our team. The visual experience makes it so easy to plan content and stay on track with our projects and campaigns.”
+          </h3>
+        </div>
+        <div>
+          <ul role="list" class="p-6 divide-y divide-slate-200">
+            <!-- Remove top/bottom padding when first/last child -->
+            <li class="flex py-4 first:pt-0 last:pb-0">
+              <img class="h-10 w-10 rounded-full" src="images/profiles/profile-1.png" alt="" />
+              <div class="ml-3 overflow-hidden">
+                <p class="text-sm font-medium text-slate-900">Sanket Gotmare</p>
+                <p class="text-sm text-slate-500 truncate">Dean Of Academics</p>
+              </div>
+            </li>
+        </ul>
+        </div>
+      </div>
+      <div class="border-2">
+        <div>
+          <h3>
+            “Walling helps us visually organise ideas and tasks, work collaboratively and efficiently within our team. The visual experience makes it so easy to plan content and stay on track with our projects and campaigns.”
+          </h3>
+        </div>
+        <div>
+          <ul role="list" class="p-6 divide-y divide-slate-200">
+            <!-- Remove top/bottom padding when first/last child -->
+            <li class="flex py-4 first:pt-0 last:pb-0">
+              <img class="h-10 w-10 rounded-full" src="images/profiles/profile-1.png" alt="" />
+              <div class="ml-3 overflow-hidden">
+                <p class="text-sm font-medium text-slate-900">Albaksh Sheikh</p>
+                <p class="text-sm text-slate-500 truncate">Iibrary Incharge</p>
+              </div>
+            </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
