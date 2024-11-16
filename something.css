@@ -130,3 +130,12 @@
     transform: translateY(-2px);
   }
   
+  /* Profile Image */
+img {
+    height: 56px; /* Increase height (original: 40px) */
+    width: 56px;  /* Increase width (original: 40px) */
+    border-radius: 50%; /* Maintain circular shape */
+  }
+
+
+  
