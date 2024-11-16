@@ -81,23 +81,23 @@
         </div>
     </header>
 
-    <section class="py-3 px-20">
+    <section class="py-3 px-4 sm:px-10 md:px-20">
       <div class="container mx-auto">
         <div class="row">
           <!-- Flex container for the text and image -->
-          <div class="flex items-center justify-between gap-10">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-10">
             <!-- Left column: Text -->
             <div class="flex-1 space-y-5">
               <h1 class="font-bold text-3xl">Best way to revise for your next coding interview</h1>
-              <h4 class="text-lg">
+              <h4 class="text-lg py-3">
                 Get everything in a single guide: Data structures, algorithms, patterns, visualizers, questions, examples, solutions, explanations, and much more!
               </h4>
     
-              <div class="custom-div border-solid border-black border-2 bg-slate-200 rounded-md">
-                <a href="https://gumroad.com/" class="center-content">
-                  Buy FREE through <span class="font-bold text-lg px-2">Gumroad</span>
-                </a>
-              </div>
+              <a href="https://gumroad.com/" style="background-color: #f8fafc; padding: 10px; text-decoration: none; border: 2px solid black; border-right-width: 2px; border-bottom-width: 2px; box-shadow: none; transition: all 0.3s ease;"
+              onmouseover="this.style.borderRightWidth='6px'; this.style.borderBottomWidth='6px'; this.style.boxShadow='5px 5px 15px rgba(0, 0, 0, 0.3)'; this.style.backgroundColor='#ec4899'; this.style.color='#fff';"
+              onmouseout="this.style.borderRightWidth='2px'; this.style.borderBottomWidth='2px'; this.style.boxShadow='none'; this.style.backgroundColor='#f8fafc'; this.style.color='inherit';">
+              Buy FREE through <span style="font-weight: bold; font-size: 1.25rem; padding-left: 0.5rem;">Gumroad</span>
+           </a>
     
               <!-- List container -->
               <div class="list-container">
@@ -116,8 +116,8 @@
             </div>
     
             <!-- Right column: Image -->
-            <div class="flex-1">
-              <img src="/images/main.png" alt="Hero-main" class="rounded-md w-full max-h-96 object-contain">
+            <div class="flex-1 max-w-full md:max-w-1/2">
+              <img src="/images/main.png" alt="Hero-main" class="rounded-md w-full max-h-96 object-cover sm:object-contain">
             </div>
           </div>
         </div>
@@ -154,15 +154,15 @@
     <section class="py-10 px-20">
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold text-center mb-8">What's Included</h2>
-        <div class="flex items-center justify-between gap-10">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-10">
           <!-- Left Column: Image -->
-          <div class="flex-1">
+          <div class="flex-1 max-w-full md:max-w-1/2">
             <div class="relative w-full h-full rounded-lg overflow-hidden shadow-lg bg-gradient-to-r from-green-400 to-yellow-400 p-6">
               <img src="images/guide2.jpg" alt="Table of Contents" class="w-full h-auto rounded-md shadow">
             </div>
           </div>
           <!-- Right Column: Text -->
-          <div class="flex-1">
+          <div class="flex-1 max-w-full md:max-w-1/2">
             <ul class="space-y-4 text-lg">
               <li class="flex items-center gap-4">
                 <span class="text-green-500">✔</span> 15+ algo patterns discussed

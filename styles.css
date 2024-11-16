@@ -139,3 +139,37 @@ img {
 
 
   
+@media (max-width: 768px) {
+  .text-display {
+    width: auto; /* Allow text display to adapt to smaller screens */
+    font-size: 14px;
+  }
+
+  .custom-div {
+    flex-direction: column; /* Stack contents vertically */
+    padding: 10px;
+  }
+
+  .dots-container {
+    flex-wrap: wrap; /* Allow dots to wrap in smaller screens */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-display {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .download-btn {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+}
+
+.custom-div a:hover {
+  background-color: #ffcccb; /* Change to your desired hover color */
+  color: #000; /* Optional: Change text color on hover */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
